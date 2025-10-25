@@ -2837,7 +2837,11 @@ data = json.loads(json_string)
 
 ## 6) 정답 및 해설
 
-### 퀴즈 1 정답: **D) json.dumps()**
+### 퀴즈 1
+<details>
+<summary>정답 보기</summary>
+
+정답: **D) json.dumps()**
 
 **해설:**
 - `json.load()`: JSON **파일** → 딕셔너리  
@@ -2861,17 +2865,23 @@ print(json_string)  # '{"이름": "홍길동"}'
 print(type(json_string))  # <class 'str'>
 ```
 
+</details>
+
 ---
 
-### 퀴즈 2 정답: **B) <class 'dict'>**
+### 퀴즈 2
+<details>
+<summary>정답 보기</summary>
+
+정답: **B) <class 'dict'>**
 
 **해설:**
 
 **단계별 실행:**
-1. 딕셔너리 생성: `data = {"이름": "홍길동", "나이": 30}`
-2. JSON 파일로 저장: `json.dump(data, f)`
-3. JSON 파일 읽기: `result = json.load(f)`
-   - `json.load()`는 JSON 파일을 읽어서 **딕셔너리로 반환**
+1. 딕셔너리 생성: `data = {"이름": "홍길동", "나이": 30}`  
+2. JSON 파일로 저장: `json.dump(data, f)`  
+3. JSON 파일 읽기: `result = json.load(f)`  
+   - `json.load()`는 JSON 파일을 읽어서 **딕셔너리로 반환**  
 4. 타입 출력: `print(type(result))` → `<class 'dict'>`
 
 **포인트:**
@@ -2879,9 +2889,15 @@ print(type(json_string))  # <class 'str'>
 - `json.load()`: JSON 파일을 읽어서 딕셔너리로 반환  
 - 파일에 저장했다가 다시 읽어도 딕셔너리로 복원됨  
 
+</details>
+
 ---
 
-### 퀴즈 3 정답: **B) print(data['프로젝트']['팀원'][1]['역할'])**
+### 퀴즈 3
+<details>
+<summary>정답 보기</summary>
+
+정답: **B) print(data['프로젝트']['팀원'][1]['역할'])**
 
 **해설:**
 
@@ -2915,6 +2931,9 @@ print(data['프로젝트']['팀원'][1]['역할'])  # '개발자'
 - **A)** ❌ `data['팀원']` → 최상위에 '팀원' 키 없음  
 - **C)** ❌ `data['프로젝트'][1]` → '프로젝트'는 딕셔너리이므로 인덱스 불가  
 - **D)** ❌ `data['팀원']['김철수']` → 팀원은 리스트라 이름으로 접근 불가  
+
+</details>
+
 
 
 ---
