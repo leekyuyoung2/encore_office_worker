@@ -454,12 +454,17 @@ print(f"{result:,.0f}원")
 
 ## 6) 정답 및 해설
 
-### 퀴즈 1 
+## 6) 정답 및 해설
+
+### 퀴즈 1
+<details>
+<summary>정답 보기</summary>
+
 정답: **C) def**
 
 **해설:**
-- Python에서 함수를 정의할 때는 `def` 키워드를 사용합니다
-- `def`는 "define"의 약자입니다
+- Python에서 함수를 정의할 때는 `def` 키워드를 사용합니다  
+- `def`는 "define"의 약자입니다  
 - 문법: `def 함수이름(매개변수):`
 
 **예시:**
@@ -467,43 +472,56 @@ print(f"{result:,.0f}원")
 def my_function():
     print("Hello!")
 ```
+</details>
+
 ---
 
-### 퀴즈 2 정답: **C) 50**
+### 퀴즈 2
+<details>
+<summary>정답 보기</summary>
+
+정답: **C) 50**
 
 **해설:**
-- 함수 정의: `def multiply(a, b=10)`
-- `b=10`은 기본값(default value)입니다
+- 함수 정의: `def multiply(a, b=10)`  
+- `b=10`은 기본값(default value)입니다  
 - `multiply(5)` 호출 시:
   - `a = 5`
   - `b = 10` (기본값 사용)
   - `return 5 * 10 = 50`
 
 **기본값의 특징:**
-- 매개변수를 생략하면 기본값이 자동으로 사용됩니다
-- `multiply(5, 20)`처럼 값을 지정하면 기본값 대신 지정한 값 사용
+- 매개변수를 생략하면 기본값이 자동으로 사용됩니다  
+- `multiply(5, 20)`처럼 값을 지정하면 기본값 대신 지정한 값 사용  
+</details>
 
 ---
 
-### 퀴즈 3 정답: **C) 40,000원**
+### 퀴즈 3
+<details>
+<summary>정답 보기</summary>
+
+정답: **C) 40,000원**
 
 **해설:**
 
 **단계별 계산:**
-1. 함수 호출: `discount_price(50000, 0.2)`
-   - `price = 50000`
+1. 함수 호출: `discount_price(50000, 0.2)`  
+   - `price = 50000`  
    - `rate = 0.2` (20% 할인)
 
-2. 함수 내부 실행:
-   - `discount = 50000 * 0.2 = 10000`
-   - `final_price = 50000 - 10000 = 40000`
+2. 함수 내부 실행:  
+   - `discount = 50000 * 0.2 = 10000`  
+   - `final_price = 50000 - 10000 = 40000`  
    - `return 40000`
 
 3. 출력: `40,000원`
 
 **포인트:**
-- 원가 50,000원에서 20% 할인 → 10,000원 할인
-- 최종 가격 = 50,000 - 10,000 = 40,000원
+- 원가 50,000원에서 20% 할인 → 10,000원 할인  
+- 최종 가격 = 50,000 - 10,000 = 40,000원  
+</details>
+
 
 ---
 
@@ -1122,13 +1140,17 @@ with open('data.txt', 'a', encoding='utf-8') as f:
 
 ## 6) 정답 및 해설
 
-### 퀴즈 1 정답: **C) 'a'**
+### 퀴즈 1
+<details>
+<summary>정답 보기</summary>
+
+정답: **C) 'a'**
 
 **해설:**
-- `'r'` (read): 읽기 전용 - 파일 수정 불가
-- `'w'` (write): 쓰기 모드 - **기존 내용을 모두 삭제**하고 새로 씀
-- `'a'` (append): **추가 모드 - 기존 내용 유지하고 끝에 추가** ✅
-- `'x'`: 배타적 생성 - 파일이 이미 존재하면 에러
+- `'r'` (read): 읽기 전용 - 파일 수정 불가  
+- `'w'` (write): 쓰기 모드 - **기존 내용을 모두 삭제**하고 새로 씀  
+- `'a'` (append): **추가 모드 - 기존 내용 유지하고 끝에 추가** ✅  
+- `'x'`: 배타적 생성 - 파일이 이미 존재하면 에러  
 
 **실무 활용:**
 ```python
@@ -1136,10 +1158,15 @@ with open('data.txt', 'a', encoding='utf-8') as f:
 with open('log.txt', 'a', encoding='utf-8') as f:
     f.write("2024-10-25 10:30 - 사용자 로그인\n")
 ```
+</details>
 
 ---
 
-### 퀴즈 2 정답: **B) 2**
+### 퀴즈 2
+<details>
+<summary>정답 보기</summary>
+
+정답: **B) 2**
 
 **해설:**
 
@@ -1162,12 +1189,17 @@ with open('log.txt', 'a', encoding='utf-8') as f:
    ```
 
 **포인트:**
-- `readlines()`는 각 줄을 리스트의 요소로 반환
-- `\n`(줄바꿈)으로 구분하여 2개의 요소가 생성됨
+- `readlines()`는 각 줄을 리스트의 요소로 반환  
+- `\n`(줄바꿈)으로 구분하여 2개의 요소가 생성됨  
+</details>
 
 ---
 
-### 퀴즈 3 정답: **C) Second<br>Third**
+### 퀴즈 3
+<details>
+<summary>정답 보기</summary>
+
+정답: **C) Second<br>Third**
 
 **해설:**
 
@@ -1201,8 +1233,10 @@ Third
 ```
 
 **주의사항:**
-- `'w'` 모드는 파일을 열 때 기존 내용을 **모두 삭제**합니다
-- 기존 내용을 보존하려면 `'a'` 모드를 사용해야 합니다
+- `'w'` 모드는 파일을 열 때 기존 내용을 **모두 삭제**합니다  
+- 기존 내용을 보존하려면 `'a'` 모드를 사용해야 합니다  
+</details>
+
 
 ---
 
@@ -1947,13 +1981,17 @@ with open('test.csv', 'r', encoding='utf-8') as f:
 
 ## 6) 정답 및 해설
 
-### 퀴즈 1 정답: **B) csv.DictReader()**
+### 퀴즈 1
+<details>
+<summary>정답 보기</summary>
+
+정답: **B) csv.DictReader()**
 
 **해설:**
-- `csv.reader()`: 각 행을 **리스트**로 반환
-- `csv.DictReader()`: 각 행을 **딕셔너리**로 반환 ✅
-- `csv.writer()`: CSV 파일에 쓰기 (리스트 형태)
-- `csv.DictWriter()`: CSV 파일에 쓰기 (딕셔너리 형태)
+- `csv.reader()`: 각 행을 **리스트**로 반환  
+- `csv.DictReader()`: 각 행을 **딕셔너리**로 반환 ✅  
+- `csv.writer()`: CSV 파일에 쓰기 (리스트 형태)  
+- `csv.DictWriter()`: CSV 파일에 쓰기 (딕셔너리 형태)  
 
 **사용 예시:**
 ```python
@@ -1964,10 +2002,15 @@ with open('data.csv', 'r', encoding='utf-8') as f:
     for row in reader:
         print(row['이름'])  # 딕셔너리 키로 접근
 ```
+</details>
 
 ---
 
-### 퀴즈 2 정답: **C) 3행 2열의 CSV 파일 생성**
+### 퀴즈 2
+<details>
+<summary>정답 보기</summary>
+
+정답: **C) 3행 2열의 CSV 파일 생성**
 
 **해설:**
 
@@ -1987,16 +2030,21 @@ data = [
 영희,85
 ```
 
-- 총 3개의 행 (3행)
-- 각 행에 2개의 값 (2열)
+- 총 3개의 행 (3행)  
+- 각 행에 2개의 값 (2열)  
 
 **포인트:**
-- `writerows(data)`: 리스트의 각 요소를 한 행씩 쓰기
-- `newline=''`: Windows에서 빈 줄 방지
+- `writerows(data)`: 리스트의 각 요소를 한 행씩 쓰기  
+- `newline=''`: Windows에서 빈 줄 방지  
+</details>
 
 ---
 
-### 퀴즈 3 정답: **B) 3**
+### 퀴즈 3
+<details>
+<summary>정답 보기</summary>
+
+정답: **B) 3**
 
 **해설:**
 
@@ -2009,11 +2057,11 @@ data = [
 ```
 
 **실행 과정:**
-1. `csv.DictReader(f)` 생성
-   - 첫 번째 행('이름,나이')을 헤더로 인식
-   - 헤더를 딕셔너리 키로 사용
+1. `csv.DictReader(f)` 생성  
+   - 첫 번째 행('이름,나이')을 헤더로 인식  
+   - 헤더를 딕셔너리 키로 사용  
 
-2. `list(reader)` 변환
+2. `list(reader)` 변환  
    ```python
    [
        {'이름': '홍길동', '나이': '30'},
@@ -2022,12 +2070,14 @@ data = [
    ]
    ```
 
-3. `len(data)` = 3
-   - 헤더는 제외되고 데이터 행만 3개
+3. `len(data)` = 3  
+   - 헤더는 제외되고 데이터 행만 3개  
 
 **포인트:**
-- `DictReader`는 첫 행을 자동으로 헤더로 인식
-- 헤더는 데이터에 포함되지 않음
+- `DictReader`는 첫 행을 자동으로 헤더로 인식  
+- 헤더는 데이터에 포함되지 않음  
+</details>
+
 
 ---
 
@@ -2790,14 +2840,14 @@ data = json.loads(json_string)
 ### 퀴즈 1 정답: **D) json.dumps()**
 
 **해설:**
-- `json.load()`: JSON **파일** → 딕셔너리
-- `json.loads()`: JSON **문자열** → 딕셔너리
-- `json.dump()`: 딕셔너리 → JSON **파일**
-- `json.dumps()`: 딕셔너리 → JSON **문자열** ✅
+- `json.load()`: JSON **파일** → 딕셔너리  
+- `json.loads()`: JSON **문자열** → 딕셔너리  
+- `json.dump()`: 딕셔너리 → JSON **파일**  
+- `json.dumps()`: 딕셔너리 → JSON **문자열** ✅  
 
 **암기 팁:**
-- `dump**s**()` / `load**s**()`: **s**tring (문자열)
-- `dump()` / `load()`: 파일
+- `dump**s**()` / `load**s**()`: **s** → **string(문자열)**  
+- `dump()` / `load()`: 파일  
 
 **예시:**
 ```python
@@ -2825,9 +2875,9 @@ print(type(json_string))  # <class 'str'>
 4. 타입 출력: `print(type(result))` → `<class 'dict'>`
 
 **포인트:**
-- `json.dump()`: 딕셔너리를 JSON 파일로 저장
-- `json.load()`: JSON 파일을 읽어서 딕셔너리로 반환
-- 파일에 저장했다가 다시 읽어도 딕셔너리로 복원됨
+- `json.dump()`: 딕셔너리를 JSON 파일로 저장  
+- `json.load()`: JSON 파일을 읽어서 딕셔너리로 반환  
+- 파일에 저장했다가 다시 읽어도 딕셔너리로 복원됨  
 
 ---
 
@@ -2838,12 +2888,12 @@ print(type(json_string))  # <class 'str'>
 **JSON 구조 분석:**
 ```json
 {
-    "프로젝트": {              ← 최상위 키
-        "팀원": [              ← "프로젝트" 안의 키
-            {...},            ← 인덱스 0
-            {                 ← 인덱스 1
+    "프로젝트": {
+        "팀원": [
+            {},
+            {
                 "이름": "김철수",
-                "역할": "개발자"  ← 여기에 접근!
+                "역할": "개발자"
             }
         ]
     }
@@ -2851,10 +2901,10 @@ print(type(json_string))  # <class 'str'>
 ```
 
 **접근 경로:**
-1. `data['프로젝트']`: 프로젝트 객체에 접근
-2. `['팀원']`: 팀원 배열에 접근
-3. `[1]`: 두 번째 요소 (김철수)
-4. `['역할']`: 역할 값 가져오기
+1. `data['프로젝트']` → 프로젝트 객체  
+2. `['팀원']` → 팀원 리스트  
+3. `[1]` → 두 번째 요소(김철수)  
+4. `['역할']` → 역할 값  
 
 **결과:**
 ```python
@@ -2862,9 +2912,10 @@ print(data['프로젝트']['팀원'][1]['역할'])  # '개발자'
 ```
 
 **다른 선택지 분석:**
-- **A)** ❌ `data['팀원']` - 최상위에 '팀원' 키가 없음
-- **C)** ❌ `data['프로젝트'][1]` - '프로젝트'는 딕셔너리라 인덱스 불가
-- **D)** ❌ `data['팀원']['김철수']` - 팀원은 리스트, 이름으로 접근 불가
+- **A)** ❌ `data['팀원']` → 최상위에 '팀원' 키 없음  
+- **C)** ❌ `data['프로젝트'][1]` → '프로젝트'는 딕셔너리이므로 인덱스 불가  
+- **D)** ❌ `data['팀원']['김철수']` → 팀원은 리스트라 이름으로 접근 불가  
+
 
 ---
 
@@ -3507,18 +3558,22 @@ print(len(df))
 
 ## 6) 정답 및 해설
 
-### 퀴즈 1 정답: **B) DataFrame**
+### 퀴즈 1
+<details>
+<summary>정답 보기</summary>
+
+정답: **B) DataFrame**
 
 **해설:**
-- **Series**: 1차원 데이터 (한 개의 열)
-- **DataFrame**: 2차원 데이터 (표 형태) ✅
-- **Array**: NumPy의 배열
-- **List**: Python 기본 리스트
+- **Series**: 1차원 데이터 (한 개의 열)  
+- **DataFrame**: 2차원 데이터 (표 형태) ✅  
+- **Array**: NumPy의 배열  
+- **List**: Python 기본 리스트  
 
 **DataFrame의 특징:**
-- 행(Row)과 열(Column)로 구성
-- 엑셀 시트와 유사한 구조
-- 각 열은 Series 객체
+- 행(Row)과 열(Column)로 구성  
+- 엑셀 시트와 유사한 구조  
+- 각 열은 Series 객체  
 
 **예시:**
 ```python
@@ -3533,9 +3588,15 @@ df = pd.DataFrame({
 print(type(df))  # <class 'pandas.core.frame.DataFrame'>
 ```
 
+</details>
+
 ---
 
-### 퀴즈 2 정답: **B) 2**
+### 퀴즈 2
+<details>
+<summary>정답 보기</summary>
+
+정답: **B) 2**
 
 **해설:**
 
@@ -3553,16 +3614,22 @@ df = pd.DataFrame(data)
 ```
 
 **len(df) 의미:**
-- DataFrame의 **행(row) 개수**를 반환
+- DataFrame의 **행(row) 개수**를 반환  
 - 2개의 행이 있으므로 → **2**
 
 **참고:**
-- 열 개수 확인: `len(df.columns)` → 2
+- 열 개수 확인: `len(df.columns)` → 2  
 - Shape 확인: `df.shape` → (2, 2) → (행, 열)
+
+</details>
 
 ---
 
-### 퀴즈 3 정답: **B) df.head(10)**
+### 퀴즈 3
+<details>
+<summary>정답 보기</summary>
+
+정답: **B) df.head(10)**
 
 **해설:**
 
@@ -3574,9 +3641,9 @@ df.head(3)     # 처음 3행
 ```
 
 **다른 선택지:**
-- **A)** `df.head()` ❌ - 5행만 보여줌 (기본값)
-- **C)** `df.top(10)` ❌ - 존재하지 않는 메서드
-- **D)** `df.first(10)` ❌ - 시간 기반 선택 메서드 (다른 용도)
+- **A)** `df.head()` ❌ - 5행만 보여줌 (기본값)  
+- **C)** `df.top(10)` ❌ - 존재하지 않는 메서드  
+- **D)** `df.first(10)` ❌ - 시간 기반 선택 메서드 (다른 용도)  
 
 **관련 메서드:**
 ```python
@@ -3591,6 +3658,9 @@ df.sample(n)  # 랜덤 n행
 df = pd.read_csv('large_file.csv')
 print(df.head(10))  # 전체가 아닌 10행만 확인
 ```
+
+</details>
+
 
 ---
 
@@ -4187,11 +4257,15 @@ Windows 엑셀에서 저장한 한글 CSV 파일을 읽을 때 자주 사용하�
 
 ## 6) 정답 및 해설
 
-### 퀴즈 1 정답: **B) pd.read_csv()**
+### 퀴즈 1
+<details>
+<summary>정답 보기</summary>
+
+정답: **B) pd.read_csv()**
 
 **해설:**
-- `pd.read_csv()`: CSV 파일 → DataFrame ✅
-- 나머지는 존재하지 않는 함수
+- `pd.read_csv()`: CSV 파일 → DataFrame ✅  
+- 나머지는 존재하지 않는 함수  
 
 **기본 사용법:**
 ```python
@@ -4199,15 +4273,21 @@ import pandas as pd
 df = pd.read_csv('data.csv')
 ```
 
+</details>
+
 ---
 
-### 퀴즈 2 정답: **B) cp949**
+### 퀴즈 2
+<details>
+<summary>정답 보기</summary>
+
+정답: **B) cp949**
 
 **해설:**
 
 **Windows 엑셀의 특징:**
-- Windows 한글 엑셀은 기본적으로 cp949 인코딩 사용
-- UTF-8로 읽으면 한글이 깨짐
+- Windows 한글 엑셀은 기본적으로 cp949 인코딩 사용  
+- UTF-8로 읽으면 한글이 깨짐  
 
 **해결 방법:**
 ```python
@@ -4219,31 +4299,37 @@ df = pd.read_csv('excel_file.csv', encoding='cp949')
 ```
 
 **다른 인코딩:**
-- **utf-8**: 최신 시스템, 웹
-- **ascii**: 영문만
-- **latin-1**: 서유럽 문자
+- **utf-8**: 최신 시스템, 웹  
+- **ascii**: 영문만  
+- **latin-1**: 서유럽 문자  
+
+</details>
 
 ---
 
-### 퀴즈 3 정답: **C) df = pd.read_csv('file.csv', nrows=1000)**
+### 퀴즈 3
+<details>
+<summary>정답 보기</summary>
+
+정답: **C) df = pd.read_csv('file.csv', nrows=1000)**
 
 **해설:**
 
 **선택지 분석:**
 
-**A)** `df = pd.read_csv('file.csv'); df.head(1000)` ❌
-- 전체 100만 행을 먼저 읽음 → 느림
-- 메모리 낭비
+**A)** `df = pd.read_csv('file.csv'); df.head(1000)` ❌  
+- 전체 100만 행을 먼저 읽음 → 느림  
+- 메모리 낭비  
 
-**B)** `df = pd.read_csv('file.csv', rows=1000)` ❌
-- `rows` 파라미터는 존재하지 않음
+**B)** `df = pd.read_csv('file.csv', rows=1000)` ❌  
+- `rows` 파라미터는 존재하지 않음  
 
-**C)** `df = pd.read_csv('file.csv', nrows=1000)` ✅
-- 처음 1000행만 읽음
-- 빠르고 메모리 효율적
+**C)** `df = pd.read_csv('file.csv', nrows=1000)` ✅  
+- 처음 1000행만 읽음  
+- 빠르고 메모리 효율적  
 
-**D)** `df = pd.read_csv('file.csv', limit=1000)` ❌
-- `limit` 파라미터는 존재하지 않음
+**D)** `df = pd.read_csv('file.csv', limit=1000)` ❌  
+- `limit` 파라미터는 존재하지 않음  
 
 **올바른 방법:**
 ```python
@@ -4251,6 +4337,9 @@ df = pd.read_csv('excel_file.csv', encoding='cp949')
 df_sample = pd.read_csv('large_file.csv', nrows=1000)
 print(df_sample.head())
 ```
+
+</details>
+
 
 ---
 
@@ -4855,7 +4944,11 @@ DataFrame의 처음 10행을 보려면?
 
 ## 6) 정답 및 해설
 
-### 퀴즈 1 정답: **B) df.head(10)**
+### 퀴즈 1
+<details>
+<summary>정답 보기</summary>
+
+정답: **B) df.head(10)**
 
 **해설:**
 ```python
@@ -4865,40 +4958,52 @@ df.head(3)     # 처음 3행
 ```
 
 **다른 선택지:**
-- **A)** `df.show()` ❌ - Pandas에 없음 (Spark에 있음)
-- **C)** `df.top()` ❌ - 존재하지 않음
-- **D)** `df.first()` ❌ - 다른 용도
+- **A)** `df.show()` ❌ - Pandas에 없음 (Spark에 있음)  
+- **C)** `df.top()` ❌ - 존재하지 않음  
+- **D)** `df.first()` ❌ - 다른 용도  
+
+</details>
 
 ---
 
-### 퀴즈 2 정답: **C) 데이터의 평균값**
+### 퀴즈 2
+<details>
+<summary>정답 보기</summary>
+
+정답: **C) 데이터의 평균값**
 
 **해설:**
 
 **info()가 보여주는 것:**
-- ✅ 데이터 타입 (Dtype)
-- ✅ Null 값 개수 (Non-Null Count)
-- ✅ 메모리 사용량 (Memory usage)
-- ❌ 평균값 (이건 describe()에서 확인)
+- ✅ 데이터 타입 (Dtype)  
+- ✅ Null 값 개수 (Non-Null Count)  
+- ✅ 메모리 사용량 (Memory usage)  
+- ❌ 평균값 (이건 describe()에서 확인)  
 
 **평균값 확인:**
 ```python
 df.describe()  # 평균, 표준편차, 최소, 최대 등
 ```
 
+</details>
+
 ---
 
-### 퀴즈 3 정답: **C) df.describe()**
+### 퀴즈 3
+<details>
+<summary>정답 보기</summary>
+
+정답: **C) df.describe()**
 
 **해설:**
 
 **describe() 출력 내용:**
-- count: 개수
-- mean: 평균 ✅
-- std: 표준편차
-- min: 최소값
-- 25%, 50%, 75%: 사분위수
-- max: 최대값
+- count: 개수  
+- mean: 평균 ✅  
+- std: 표준편차  
+- min: 최소값  
+- 25%, 50%, 75%: 사분위수  
+- max: 최대값  
 
 **예시:**
 ```python
@@ -4913,22 +5018,24 @@ df.describe()
 ```
 
 **다른 선택지:**
-- **A)** `df.summary()` ❌ - 존재하지 않음
-- **B)** `df.stats()` ❌ - 존재하지 않음
-- **D)** `df.info()` ❌ - 통계 아닌 구조 정보
+- **A)** `df.summary()` ❌ - 존재하지 않음  
+- **B)** `df.stats()` ❌ - 존재하지 않음  
+- **D)** `df.info()` ❌ - 통계 아닌 구조 정보  
+
+</details>
 
 ---
 
 ## 💡 7교시 핵심 요약
+<details>
+<summary>펼치기</summary>
 
 ### 데이터 탐색 3대 함수
-
-1. **head()**: 데이터 샘플 보기
-2. **info()**: 구조와 타입 확인
-3. **describe()**: 통계 요약
+1. **head()**: 데이터 샘플 보기  
+2. **info()**: 구조와 타입 확인  
+3. **describe()**: 통계 요약  
 
 ### 데이터 분석 워크플로우
-
 ```python
 # 1. 데이터 로드
 df = pd.read_csv('data.csv')
@@ -4946,11 +5053,13 @@ df.isnull().sum()
 ```
 
 ### 실무 활용 팁
+✅ **head()**: 코드 테스트 시 먼저 확인  
+✅ **info()**: Null 값과 타입 문제 파악  
+✅ **describe()**: 이상치 발견  
+✅ **value_counts()**: 범주형 데이터 분포 확인  
 
-✅ **head()**: 코드 테스트 시 먼저 확인
-✅ **info()**: Null 값과 타입 문제 파악
-✅ **describe()**: 이상치 발견
-✅ **value_counts()**: 범주형 데이터 분포 확인
+</details>
+
 
 ---
 
