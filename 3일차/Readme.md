@@ -455,8 +455,6 @@ print(f"{result:,.0f}원")
 ## 6) 정답 및 해설
 
 ### 퀴즈 1 
-<details>
-<summary>정답 보기</summary>
 정답: **C) def**
 
 **해설:**
@@ -469,10 +467,6 @@ print(f"{result:,.0f}원")
 def my_function():
     print("Hello!")
 ```
-
-</details>
-
-
 ---
 
 ### 퀴즈 2 정답: **C) 50**
