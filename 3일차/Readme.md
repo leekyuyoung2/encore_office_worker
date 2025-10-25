@@ -454,7 +454,10 @@ print(f"{result:,.0f}원")
 
 ## 6) 정답 및 해설
 
-### 퀴즈 1 정답: **C) def**
+### 퀴즈 1 
+<details>
+<summary>정답 보기</summary>
+정답: **C) def**
 
 **해설:**
 - Python에서 함수를 정의할 때는 `def` 키워드를 사용합니다
@@ -466,6 +469,9 @@ print(f"{result:,.0f}원")
 def my_function():
     print("Hello!")
 ```
+
+</details>
+
 
 ---
 
