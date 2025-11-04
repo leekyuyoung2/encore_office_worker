@@ -231,36 +231,52 @@ plt.show()
 
 ```python
 # 강남구, 마포구, 종로구 3곳의 커피/음료 매출 비교
-selected_districts = ['강남구', '마포구', '종로구']
-coffee_data = df[df['서비스업종코드명'] == '커피/음료']
+kang_nam = [name for name in df['상권코드명'].unique().tolist() if '강남' in name]
+mapo = [name for name in df['상권코드명'].unique().tolist() if '마포' in name]
+jungro = [name for name in df['상권코드명'].unique().tolist() if '종로' in name]
 
-district_sales = coffee_data[coffee_data['행정구역명'].isin(selected_districts)].groupby('행정구역명')['월매출금액'].mean().sort_values(ascending=False)
+selected_districts = kang_nam +  mapo + jungro
+coffee_data = df[df['서비스업종코드명'] == '커피-음료']
 
+district_sales = coffee_data[coffee_data['상권코드명'].isin(selected_districts)].groupby('상권코드명')['당월매출금액'].mean().sort_values(ascending=False)
+district_sales
+
+# 강남구, 마포구, 종로구 3곳의 커피/음료 매출 비교
+selected_districts = kang_nam +  mapo + jungro
+coffee_data = df[df['서비스업종코드명'] == '커피-음료']
+
+district_sales = coffee_data[coffee_data['상권코드명'].isin(selected_districts)].groupby('상권코드명')['당월매출금액'].mean().sort_values(ascending=False)
+
+#내용이 많아서 두개로 나눠서 그린다.
+split_num = len(district_sales)//2
+
+sales = [ district_sales[:split_num],district_sales[split_num:] ]
 # 바 차트
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(1,2,figsize=(15, 6))
+for i in range(2):
 
-bars = ax.bar(district_sales.index, district_sales.values, 
-              color=['#E63946', '#F1FAEE', '#A8DADC'])
+    bars = ax[i].bar(sales[i].index, sales[i].values, 
+                color=['#E63946', '#F1FAEE', '#A8DADC'])
 
-# 꾸미기
-ax.set_title('지역별 커피/음료 평균 월매출 비교\n(신규 입점 후보지 분석)', 
-             fontsize=16, fontweight='bold', pad=20)
-ax.set_ylabel('평균 월매출금액 (원)', fontsize=12)
-ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{int(x/1000000):.1f}M'))
+    # 꾸미기
+    ax[i].set_title('지역별 커피/음료 평균 월매출 비교\n(신규 입점 후보지 분석)', 
+                fontsize=16, fontweight='bold', pad=20)
+    ax[i].set_ylabel('평균 월매출금액 (원)', fontsize=12)
+    ax[i].yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{int(x/1000000):.1f}M'))
 
-# 값 표시
-for bar in bars:
-    height = bar.get_height()
-    ax.text(bar.get_x() + bar.get_width()/2., height,
-           f'{height/1000000:.1f}M원',
-           ha='center', va='bottom', fontsize=12, fontweight='bold')
+    # 값 표시
+    for bar in bars:
+        height = bar.get_height()
+        ax[i].text(bar.get_x() + bar.get_width()/2., height,
+            f'{height/1000000:.1f}M원',
+            ha='center', va='bottom', fontsize=12, fontweight='bold')
 
-# 그리드
-ax.grid(True, axis='y', linestyle='--', alpha=0.3)
+    # 그리드
+    ax[i].grid(True, axis='y', linestyle='--', alpha=0.3)
 
-plt.tight_layout()
-plt.savefig('output/1_district_cafe_comparison.png', dpi=300, bbox_inches='tight')
-plt.show()
+    plt.tight_layout()
+    plt.savefig('output/1_district_cafe_comparison.png', dpi=300, bbox_inches='tight')
+    plt.show()
 
 print("\n** 의사결정 인사이트 **")
 print(f"가장 높은 매출 지역: {district_sales.index[0]} ({district_sales.values[0]/1000000:.1f}M원)")
